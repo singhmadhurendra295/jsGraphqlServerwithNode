@@ -1,0 +1,20 @@
+type User {
+    _id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+}
+type AuthenticateUserPayload {
+  user: User!
+  token: String!
+}
+type Query {
+  userProfile(_id: ID!): User!
+}
+type Mutation {
+  createUser(firstName: String!, lastName: String!, email: String!, password: String!): User!
+  login(email: String!, password: String!): AuthenticateUserPayload!
+  updateUser(_id: ID!, firstName: String!, lastName: String!): User!
+  deleteUser(_id: ID!): User!
+}

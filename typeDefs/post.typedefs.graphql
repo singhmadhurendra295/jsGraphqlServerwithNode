@@ -1,0 +1,17 @@
+type Post {
+    _id: ID!
+    title: String!
+    description: String!
+    image: String!
+    userId: User!
+}
+type Query {
+  posts(userId: ID!): [Post!]!
+  postInfo(_id: ID!):Post!
+}
+type Mutation {
+  createPost(title: String!, description: String!, image: String!, userId: ID!): Post!
+  posts(userId: ID!): [Post!]!
+  updatePost(_id: ID!, title: String!, description: String!): Post!
+  deletePost(_id: ID!): Boolean!
+}

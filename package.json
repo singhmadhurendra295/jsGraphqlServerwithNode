@@ -1,0 +1,28 @@
+{
+  "name": "graphqldemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhmadhurendra295/GraphqlDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhmadhurendra295/GraphqlDemo/issues"
+  },
+  "homepage": "https://github.com/singhmadhurendra295/GraphqlDemo#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "graphql-yoga": "^1.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "merge-graphql-schemas": "^1.7.0",
+    "mongoose": "^5.6.10",
+    "nodemon": "^1.19.1"
+  }
+}
