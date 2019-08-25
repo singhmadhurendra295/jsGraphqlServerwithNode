@@ -18,3 +18,16 @@ type Mutation {
   updateUser(_id: ID!, firstName: String!, lastName: String!): User!
   deleteUser(_id: ID!): User!
 }
+
+input CreateUserInput {
+    name: String!
+    email: String!
+    age: Int
+}
+
+input UpdateUserInput {
+    name: String
+    email: String
+    age: Int
+}
+

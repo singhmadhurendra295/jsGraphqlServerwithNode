@@ -15,3 +15,15 @@ type Mutation {
   updatePost(_id: ID!, title: String!, description: String!): Post!
   deletePost(_id: ID!): Boolean!
 }
+input CreatePostInput {
+    title: String!
+    body: String!
+    published: Boolean!
+    author: ID!
+}
+
+input UpdatePostInput {
+    title: String
+    body: String
+    published: Boolean
+}

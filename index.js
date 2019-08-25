@@ -1,11 +1,11 @@
-const { GraphQLServer } = require('graphql-yoga');
+const { GraphQLServer, PubSub } = require('graphql-yoga');
 var jwt = require('jsonwebtoken');
 const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
 const models = require('./models/index');
 
 console.log(resolvers)
-
+const pubsub = new PubSub();
 let authenticate = async (resolve, root, args, context, info) => {
     let token;
     try {
@@ -20,7 +20,7 @@ let authenticate = async (resolve, root, args, context, info) => {
 const server = new GraphQLServer({
     typeDefs,
     resolvers,
-    context: req => ({ ...req, models }),
+    context: req => ({ ...req, models, pubsub }),
     //middlewares: [authenticate]
 });
 server.start(() => {

@@ -1,3 +1,4 @@
+var jwt = require('jsonwebtoken');
 module.exports = {
     Query: {
         userProfile: async (parent, { _id }, { models }) => {
